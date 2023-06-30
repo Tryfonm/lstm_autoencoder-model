@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  model-train:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./runs:/workspace/runs
+      - ./models:/workspace/models
+    container_name: model-train
+    entrypoint: python
+    command: /workspace/src/main.py
