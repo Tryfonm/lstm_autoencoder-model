@@ -22,7 +22,6 @@ class SentenceEncoder:
         """
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModel.from_pretrained(model_name)
-        self.model
 
     def __call__(self, sentence: str) -> List:
         tokens = self.tokenizer.tokenize(sentence)
