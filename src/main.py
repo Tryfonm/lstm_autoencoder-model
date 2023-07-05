@@ -106,7 +106,7 @@ def train(
 
         val_loss = eval(model, val_dataloader, criterion)
 
-        LOGGER.debut(f"Epoch [{epoch+1}/{num_epochs}], Train Loss: {epoch_loss:.4f}, Val Loss: {val_loss:.4f}")
+        LOGGER.debug(f"Epoch [{epoch+1}/{num_epochs}], Train Loss: {epoch_loss:.4f}, Val Loss: {val_loss:.4f}")
 
         writer.add_scalar('Loss/Train', epoch_loss, epoch)
         writer.add_scalar('Loss/Validation', val_loss, epoch)
